@@ -56,13 +56,14 @@ $ python evaluate.py --type video --weight model/udnie/weights.h5 --content inpu
 
 ## model
 
-there're some pretrained model to download.
+there're some pretrained model to [download][model].
 
 each model dir contains
 - model weights
 - generated test images
 - loss logs for tensorboard
 
+[model]: https://aistudio.baidu.com/aistudio/datasetdetail/33631
 
 
 ## develop
@@ -97,9 +98,12 @@ $ python train.py --style-image input/style/udnie.jpg --test-image input/content
 launch tensorboard to check the training losses.
 
 ```bash
-$ tensorboard --logdir ./model
+$ tensorboard --logdir ./model --bind_all
 ```
 
+<p align='center'>
+<img src = 'logs.png'>
+</p>
 
 
 ## refs
