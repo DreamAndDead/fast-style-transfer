@@ -1,0 +1,14 @@
+__pycache__/
+data/
+examples/
+model/
+model-*/
+model_*/
+report.txt
+temp/
+*.h5
+
+*.avi
+
+.ipynb_checkpoints/
+origin-model/
