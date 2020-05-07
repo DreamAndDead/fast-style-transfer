@@ -44,9 +44,9 @@ A tensorflow v2 implementation of [fast style transfer method][fast].
 
 ### prequisite
 
-there're some [pretrained models][model].
+download the [pretrained models][model] and save in `./model/`.
 
-each model dir contains
+each model contains
 - model weights
 - generated test images
 - loss logs for tensorboard
@@ -90,7 +90,7 @@ e.g. train model using udnie style, chicago as test image, output model in `mode
 $ python train.py --style-image input/style/udnie.jpg --test-image input/content/chicago.jpg --output model/udnie
 ```
 
-### tensorboard
+### loss visualization
 
 launch tensorboard to check the training losses.
 
@@ -105,7 +105,7 @@ $ tensorboard --logdir ./model --bind_all
 
 ## refs
 
-this project heavily borrow the code from project [lengstrom/fast-style-transfer][fast] but using tf v2 and keras model.
+this project borrows the code from project [lengstrom/fast-style-transfer][fast] but uses tf v2 and keras model.
 
 this implementation is based on
 - [Supplementary material][supplementary] of Justin's paper [Perceptual Losses for Real-Time Style Transfer and Super-Resolution][origin]
