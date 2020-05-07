@@ -34,7 +34,7 @@ A tensorflow v2 implementation of [fast style transfer method][fast].
 **styled video (click to play video)**
 
 <p align = 'center'>
-<a href="https://dreamanddead-github-io.oss-cn-hongkong.aliyuncs.com/style-transfer/fox.mp4"><img src = 'input/video/fox.png' width = '627px'></a>
+<a href="https://dreamanddead-github-io.oss-cn-hongkong.aliyuncs.com/style-transfer/fox.mp4"><img src = 'input/video/fox.png' height = '246px'></a>
 <a href="https://dreamanddead-github-io.oss-cn-hongkong.aliyuncs.com/style-transfer/udnie_fox.avi"><img src = 'output/udnie/fox.png' height = '246px'></a>
 <a href="https://dreamanddead-github-io.oss-cn-hongkong.aliyuncs.com/style-transfer/wave_fox.avi"><img src = 'output/wave/fox.png' height = '246px'></a>
 </p>
@@ -42,29 +42,26 @@ A tensorflow v2 implementation of [fast style transfer method][fast].
 
 ## stylish
 
-stylish image
+### prequisite
 
-```bash
-$ python evaluate.py --type image --weight model/udnie/weights.h5 --content input/udnie/chicago.jpg --output output/udnie/chicago.jpg
-```
-
-stylish video
-
-```bash
-$ python evaluate.py --type video --weight model/udnie/weights.h5 --content input/video/fox.mp4 --output output/udnie/fox.avi
-```
-
-## model
-
-there're some pretrained model to [download][model].
+there're some [pretrained models][model].
 
 each model dir contains
 - model weights
 - generated test images
 - loss logs for tensorboard
 
-[model]: https://aistudio.baidu.com/aistudio/datasetdetail/33631
+### stylish image
 
+```bash
+$ python evaluate.py --type image --weight model/udnie/weights.h5 --content input/udnie/chicago.jpg --output output/udnie/chicago.jpg
+```
+
+### stylish video
+
+```bash
+$ python evaluate.py --type video --weight model/udnie/weights.h5 --content input/video/fox.mp4 --output output/udnie/fox.avi
+```
 
 ## develop
 
@@ -125,3 +122,5 @@ also, [Tensorflow official site][tf tutorial] and [Justin's ppt in cs20si][ppt] 
 [gaty]: https://arxiv.org/abs/1508.06576
 [ppt]: ./paper/06_00_slides.pdf
 [instance]: https://arxiv.org/abs/1607.08022
+[model]: https://aistudio.baidu.com/aistudio/datasetdetail/33631
+
